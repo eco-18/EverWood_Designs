@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>FlexiWall Desk — EverWood Designs | PHP 499.00</title>
+<meta name="description" content="A wall-mounted wooden shelf that folds down into a desk. Made in small batches in Candaba, Pampanga.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F4A33'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='28' fill='%23F5F1E8' text-anchor='middle'%3EeW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F1E8; --surface:#FBF8F2; --surface-2:#EFE9DC;
+  --ink:#1F1A14; --ink-2:#5B5144; --line:rgba(31,26,20,.12);
+  --accent:#2F4A33; --accent-ink:#F5F1E8; --oak:#B7773A; --oak-ink:#8A5522; --sage:#5F7A5C;
+  --stage:#EDE6D8; --ease-out:cubic-bezier(.22,1,.36,1); --ease-in-out:cubic-bezier(.65,0,.35,1);
+  --radius:20px;
+}
+[data-theme="dark"]{
+  --bg:#15110D; --surface:#1D1813; --surface-2:#26201A;
+  --ink:#F3EDE2; --ink-2:#B9AE9D; --line:rgba(243,237,226,.14);
+  --accent:#D9A066; --accent-ink:#1F1A14; --oak:#D9A066; --oak-ink:#D9A066; --sage:#8FA98A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.03;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;color:inherit;background:none;border:none}
+input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--oak);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.serif{font-family:"Fraunces",Georgia,"Times New Roman",serif;letter-spacing:-.02em}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--oak-ink)}
+.fig{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+/* Announcement + Nav */
+.announce{background:var(--accent);color:var(--accent-ink);text-align:center;font-size:13px;padding:9px 16px}
+nav.top{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 84%,transparent);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.wordmark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.wordmark .wm-top{display:flex;align-items:baseline;font-size:26px}
+.wordmark .ever{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:300;color:var(--sage)}
+.wordmark .wood{font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.02em}
+.wordmark .wm-sub{display:flex;align-items:center;gap:8px;margin-top:4px}
+.wordmark .wm-sub i{flex:1;height:1px;background:var(--line);display:block}
+.wordmark .wm-sub span{font-size:9px;letter-spacing:.42em;font-weight:500}
+.links{display:flex;gap:26px;font-size:15px}
+.links a{text-decoration:none;padding:6px 2px;position:relative}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--oak);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out)}
+.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+.nav-r{display:flex;align-items:center;gap:6px}
+.icon-btn{width:44px;height:44px;display:grid;place-items:center;border-radius:999px}
+.icon-btn:hover{background:var(--surface-2)}
+.bag-count{position:absolute;top:2px;right:2px;background:var(--oak);color:#fff;font-size:11px;font-weight:600;width:20px;height:20px;border-radius:999px;display:grid;place-items:center}
+.theme-grp{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.theme-grp button{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;font-size:15px}
+.theme-grp button.on{background:var(--surface-2)}
+.menu-btn{display:none}
+.mobile-menu{display:none;border-top:1px solid var(--line);padding:12px 20px 20px;background:var(--bg)}
+.mobile-menu a{display:block;font-family:"Fraunces",Georgia,serif;font-size:30px;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.mobile-menu.open{display:block}
+/* Buttons + cards */
+.btn-p{background:var(--accent);color:var(--accent-ink);border-radius:999px;font-weight:600;min-height:50px;padding:0 30px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:transform .3s var(--ease-out),opacity .3s;border:1px solid transparent}
+.btn-p:hover{transform:translateY(-1px)}
+.btn-g{border:1px solid var(--line);border-radius:999px;min-height:50px;padding:0 26px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface);text-decoration:none;font-weight:500}
+.btn-g:hover{background:var(--surface-2)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 32px rgba(31,26,20,.06)}
+.stage{background:var(--stage);background-image:radial-gradient(120% 90% at 50% 20%,#F5F0E4 0%,#EDE6D8 55%,#E2D8C4 100%);box-shadow:inset 0 0 80px rgba(31,26,20,.08);border-radius:var(--radius);position:relative;overflow:hidden}
+.input{background:var(--surface);border:1px solid var(--line);border-radius:12px;min-height:50px;padding:0 14px;width:100%}
+textarea.input{padding:12px 14px;min-height:100px}
+label.f{display:block;font-size:14px;font-weight:500}
+label.f input,label.f select,label.f textarea{margin-top:6px}
+.err{color:#B3261E;font-size:13px;margin-top:4px;display:none}
+.err.show{display:block}
+/* Layout */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;padding:36px 0 10px;align-items:start}
+.hero h1{font-size:clamp(42px,5vw,68px);line-height:1.02;font-weight:500;margin-top:8px}
+.price{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:14px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs button{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);padding:0}
+.thumbs button.on{border-color:var(--oak);border-width:2px}
+.thumbs img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.seg{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;background:rgba(251,248,242,.94);border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px}
+.seg button{padding:9px 22px;border-radius:999px;font-size:14px;font-weight:500;min-height:44px}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.stage-img{width:100%;height:100%;object-fit:contain;padding:36px;transition:opacity .45s var(--ease-out),transform .45s var(--ease-out)}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--ink-2);margin-top:16px}
+.acc{border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-h{width:100%;display:flex;justify-content:space-between;align-items:center;padding:16px 2px;font-weight:500;text-align:left;min-height:52px}
+.acc-b{display:none;padding:0 2px 18px;color:var(--ink-2);font-size:15px}
+.acc-item.open .acc-b{display:block}
+.acc-item.open .acc-h .chev{transform:rotate(180deg)}
+.chev{transition:transform .3s var(--ease-out)}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:14px 0;margin-top:44px}
+.marquee-in{display:flex;gap:36px;white-space:nowrap;width:max-content;animation:mq 36s linear infinite;font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.marquee:hover .marquee-in{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.sec{padding:64px 0 8px}
+.sec h2{font-size:clamp(32px,4vw,48px);font-weight:500;line-height:1.08;margin-top:10px}
+.lead{max-width:62ch;margin-top:14px;color:var(--ink-2)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:28px}
+.bento .card{padding:24px}
+.bento .wide{grid-column:span 4}.bento .narrow{grid-column:span 2}
+.stat{padding:24px}
+.stat .n{font-family:"Fraunces",Georgia,serif;font-size:52px;line-height:1;color:var(--oak)}
+.stat p{margin-top:8px;font-size:14px}
+.spec-table{width:100%;border-collapse:collapse;margin-top:20px}
+.spec-table th,.spec-table td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.spec-table th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);font-weight:500;width:32%}
+.steps{list-style:none;margin-top:20px;border-top:1px solid var(--line)}
+.steps li{display:flex;gap:18px;padding:16px 2px;border-bottom:1px solid var(--line)}
+.steps .no{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--oak-ink);padding-top:3px;min-width:32px}
+.steps h3{font-size:17px;font-weight:600}
+.steps p{color:var(--ink-2);font-size:15px;margin-top:2px}
+.jcard{overflow:hidden;text-decoration:none;display:block}
+.jcard img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.jcard .jb{padding:20px}
+.jcard .jt{font-family:"Fraunces",Georgia,serif;font-size:22px;line-height:1.25;margin-top:8px}
+.cta-band{background:var(--accent);color:var(--accent-ink);border-radius:var(--radius);padding:32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:36px}
+.cta-band .big{font-family:"Fraunces",Georgia,serif;font-size:30px}
+.cta-band .btn-g{background:#F5F1E8;color:#1F1A14;border-color:transparent;font-weight:600}
+/* Pages */
+.page{display:none}
+.page.active{display:block;animation:fade .45s var(--ease-out)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.page-head{padding:44px 0 8px}
+.page-head h1{font-size:clamp(36px,5vw,56px);font-weight:500;line-height:1.05;margin-top:10px}
+.article{max-width:62ch;margin:0 auto;padding:40px 20px 20px}
+.article h1{font-size:clamp(34px,4.5vw,52px);font-weight:500;line-height:1.08}
+.article p{margin:18px 0;font-size:17px;line-height:1.75}
+.article blockquote{border-left:2px solid var(--oak);padding-left:20px;font-family:"Fraunces",Georgia,serif;font-size:24px;margin:28px 0}
+.prose{max-width:62ch}
+.prose p{margin:16px 0}
+.prose h2{font-family:"Fraunces",Georgia,serif;font-size:28px;margin:28px 0 8px;font-weight:500}
+.prose ul{margin:12px 0 12px 22px}
+.prose li{margin:6px 0}
+/* Cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:60;display:none}
+.overlay.show{display:block}
+.drawer{position:fixed;z-index:61;background:var(--surface);top:0;right:0;bottom:0;width:min(430px,100%);padding:24px;overflow:auto;transform:translateX(105%);transition:transform .45s var(--ease-out);box-shadow:-20px 0 60px rgba(0,0,0,.18)}
+.drawer.show{transform:none}
+.drawer h2{font-family:"Fraunces",Georgia,serif;font-size:28px;font-weight:500}
+.qty-ctl{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.qty-ctl button{width:44px;height:44px;font-size:18px}
+.qty-ctl span{min-width:36px;text-align:center;font-variant-numeric:tabular-nums}
+.total-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+.total-row.grand{font-weight:600;font-size:19px;border-bottom:none}
+/* Checkout */
+.co-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;padding:32px 0 60px;align-items:start}
+.co-step{padding:22px;margin-bottom:14px}
+.co-step h2{font-family:"Fraunces",Georgia,serif;font-size:22px;font-weight:500;display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left}
+.radio-card{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--surface);cursor:pointer}
+.radio-card input{margin-top:5px;width:20px;height:20px}
+.radio-card.sel{border-color:var(--oak);background:var(--surface-2)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.form-grid .full{grid-column:1/-1}
+/* Track */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line);font-size:14px}
+.chip.on{border-color:var(--oak);background:var(--surface-2);font-weight:600}
+.timeline{list-style:none;margin-top:18px}
+.timeline li{display:flex;gap:14px;padding:12px 0}
+.dot{width:12px;height:12px;border-radius:999px;margin-top:7px;flex-shrink:0;background:var(--line)}
+.dot.done{background:var(--oak)}
+/* Footer */
+footer{margin-top:72px;border-top:1px solid var(--line);background:var(--surface)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:28px;padding:48px 0 28px}
+.foot-grid h3{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px;font-weight:500}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin:8px 0}
+.foot-grid a{text-decoration:none;font-size:15px}
+.foot-grid a:hover{text-decoration:underline}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding:18px 0 26px;font-size:14px;color:var(--ink-2);border-top:1px solid var(--line)}
+.giant{font-family:"Fraunces",Georgia,serif;font-weight:600;text-align:center;line-height:.85;font-size:clamp(72px,16vw,220px);color:var(--surface-2);transform:translateY(16%);user-select:none;overflow:hidden}
+.member-row{display:flex;justify-content:space-between;gap:16px;padding:16px 2px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.member-row .nm{font-family:"Fraunces",Georgia,serif;font-size:20px}
+.member-row a{font-family:"IBM Plex Mono",monospace;font-size:13px}
+/* Consent */
+.consent{position:fixed;z-index:70;left:20px;bottom:20px;max-width:360px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.16);display:none}
+.consent.show{display:block}
+.consent h3{font-family:"Fraunces",Georgia,serif;font-size:20px;font-weight:500}
+.consent p{font-size:14px;color:var(--ink-2);margin-top:6px}
+.consent .row{display:flex;gap:8px;margin-top:14px}
+.consent .row button{flex:1;min-height:46px;border-radius:999px;font-weight:600;font-size:14px}
+.consent .acc{background:var(--accent);color:var(--accent-ink)}
+.consent .ess{border:1px solid var(--line)}
+/* Mobile buy bar */
+.buybar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:35;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.buybar-in{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1280px;margin:0 auto}
+.toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:all .35s var(--ease-out);z-index:80}
+.toast.show{opacity:1;transform:translateX(-50%)}
+@media(max-width:1024px){
+  .links{display:none}.menu-btn{display:grid}
+  .hero{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr}
+  .bento .wide,.bento .narrow{grid-column:span 6}
+  .grid2{grid-template-columns:1fr}
+  .co-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .buybar{display:block}
+  body{padding-bottom:76px}
+  .drawer{top:auto;left:0;right:0;bottom:0;width:100%;max-height:88dvh;border-radius:20px 20px 0 0;transform:translateY(105%)}
+  .drawer.show{transform:none}
+  .consent{left:12px;right:12px;bottom:84px;max-width:none}
+}
+@media(max-width:560px){
+  .grid4{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .theme-grp{display:none}
+  .thumbs{grid-template-columns:repeat(5,1fr)}
+}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="announce">Made in small batches in Candaba, Pampanga. Free pickup at the workshop, or delivery to your door.</div>
+<nav class="top" aria-label="Primary">
+  <div class="nav-in">
+    <a class="wordmark" href="#/home" aria-label="EverWood Designs home">
+      <span class="wm-top"><span class="ever">Ever</span><span class="wood">Wood</span></span>
+      <span class="wm-sub"><i></i><span>DESIGNS</span></span>
+    </a>
+    <div class="links" id="deskLinks">
+      <a href="#/product" data-nav="product">Product</a>
+      <a href="#/how-made" data-nav="how-made">How it is made</a>
+      <a href="#/specs" data-nav="specs">Specs</a>
+      <a href="#/reviews" data-nav="reviews">Reviews</a>
+    </div>
+    <div class="nav-r">
+      <a href="#/track" class="links" style="display:flex"><a href="#/track" style="text-decoration:none;font-size:15px;padding:6px 4px">Track order</a></a>
+      <div class="theme-grp" role="group" aria-label="Theme">
+        <button data-theme-btn="light" aria-label="Light theme" title="Light">☀</button>
+        <button data-theme-btn="dark" aria-label="Dark theme" title="Dark">☾</button>
+        <button data-theme-btn="system" aria-label="System theme" title="System">◐</button>
+      </div>
+      <button class="icon-btn" id="bagBtn" aria-label="Open bag" style="position:relative">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="bag-count" id="bagCount">1</span>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#/home">Home</a><a href="#/product">Product</a><a href="#/how-made">How it is made</a><a href="#/specs">Specs</a><a href="#/reviews">Reviews</a><a href="#/faq">FAQ</a><a href="#/about">Our story</a><a href="#/track">Track order</a>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HOME ============ -->
+<section class="page" data-page="home">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="stage" style="aspect-ratio:4/3">
+          <span class="fig" style="position:absolute;top:14px;left:16px">FIG. 01 — Closed shelf</span>
+          <span class="fig" style="position:absolute;top:14px;right:16px">EverWood Designs</span>
+          <img class="stage-img" id="heroImg" src="images/closed.png" alt="FlexiWall Desk closed as a shelf">
+          <div class="seg" role="tablist" aria-label="Product state">
+            <button class="on" data-seg="closed" role="tab" aria-selected="true">Shelf</button>
+            <button data-seg="open" role="tab" aria-selected="false">Desk</button>
+          </div>
+        </div>
+        <div class="thumbs" id="heroThumbs">
+          <button class="on" data-thumb="images/closed.png" aria-label="Closed shelf"><img src="images/closed.png" alt=""></button>
+          <button data-thumb="images/open.png" aria-label="Open desk"><img src="images/open.png" alt=""></button>
+          <button data-thumb="images/packaging.jpg" aria-label="Packaging box"><img src="images/packaging.jpg" alt=""></button>
+          <button data-thumb="images/workshop.jpg" aria-label="Workshop"><img src="images/workshop.jpg" alt=""></button>
+          <button data-thumb="images/in-room.jpg" aria-label="In a small room"><img src="images/in-room.jpg" alt=""></button>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">EverWood Designs</p>
+        <h1 class="serif">FlexiWall Desk</h1>
+        <p style="margin-top:12px;font-size:18px;max-width:62ch">A shelf that becomes a desk. Closed, it holds your books and plants. Open, it gives you a steady place for a laptop and notebooks. Folded away, your floor is free again.</p>
+        <p class="price">₱499.00</p>
+        <p style="color:var(--ink-2);font-size:14px;margin-top:4px">No reviews yet. Reviews are published after delivery, from verified buyers only.</p>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:20px">
+          <span style="font-size:14px;font-weight:500">Quantity</span>
+          <div class="qty-ctl"><button data-qty="-1" aria-label="Decrease quantity">−</button><span id="qtyHome">1</span><button data-qty="1" aria-label="Increase quantity">+</button></div>
+        </div>
+        <div class="card" style="padding:18px;margin-top:18px">
+          <p style="font-weight:600;font-size:15px">Delivery estimate</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+            <label class="f">Method<select class="input" id="estMethod"><option value="delivery">Home delivery</option><option value="pickup">Store pickup</option></select></label>
+            <label class="f">Province / city<select class="input" id="estCity"><option value="A">Pampanga — Candaba</option><option value="B">Metro Manila</option><option value="C">Rest of Luzon</option><option value="D">Visayas / Mindanao</option></select></label>
+          </div>
+          <p id="estOut" style="margin-top:12px;font-weight:600;font-size:15px"></p>
+          <p id="estNote" style="color:var(--ink-2);font-size:14px"></p>
+          <p style="font-size:14px;margin-top:6px">Pickup free · Zone A ₱99 · Zone B ₱149 · Zone C ₱199 · Zone D ₱249</p>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+          <button class="btn-p" id="addHome" style="flex:1;min-width:160px">Add to bag</button>
+          <a class="btn-g" href="#/checkout" style="flex:1;min-width:160px">Buy now</a>
+        </div>
+        <div class="trust"><span>GCash, Maya, cards and cash on delivery</span><span>Track every step</span><span>Made in small batches in Pampanga</span></div>
+        <div class="acc" style="margin-top:18px">
+          <div class="acc-item"><button class="acc-h">Details <span class="chev">▾</span></button><div class="acc-b">A wall-mounted wooden shelf that folds down into a desk. Closed, it holds books, plants and personal items. Open, it gives you a steady work surface for a laptop, notebooks and school materials. Folded against the wall, it frees floor space. Made in Candaba, Pampanga, Philippines.</div></div>
+          <div class="acc-item"><button class="acc-h">Materials and care <span class="chev">▾</span></button><div class="acc-b">Palochina wood panel with a natural varnish finish in a light oak tone. Metal brackets and supports, screws and wood glue. Wipe with a dry cloth. Keep away from prolonged damp. Built for a laptop, notebooks and light study materials.</div></div>
+          <div class="acc-item"><button class="acc-h">Delivery and returns <span class="chev">▾</span></button><div class="acc-b">Made in small batches. Allow 3 to 5 working days after payment, then transit by zone. Free pickup at Pansol, Pasig, Candaba. Returns: 7 days for defects, 14 days for unused items. See the Returns page for details.</div></div>
+          <div class="acc-item"><button class="acc-h">Installation <span class="chev">▾</span></button><div class="acc-b">Wall-mounted. Once mounted, it is very stable. Find solid fixing points, use anchors that match your wall, and follow the friendly step-by-step guide on the Product page.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-in"><span>₱499.00 — one product, one price</span><span>·</span><span>Made in Candaba, Pampanga</span><span>·</span><span>Small batches, 12 to 15 a month</span><span>·</span><span>GCash · Maya · Cards · Cash on delivery</span><span>·</span><span>Track every step</span><span>·</span><span>₱499.00 — one product, one price</span><span>·</span><span>Made in Candaba, Pampanga</span><span>·</span><span>Small batches, 12 to 15 a month</span><span>·</span><span>GCash · Maya · Cards · Cash on delivery</span><span>·</span><span>Track every step</span><span>·</span></div></div>
+    <div class="sec">
+      <p class="eyebrow">Why it fits</p>
+      <h2 class="serif">Five reasons it beats a standard desk.</h2>
+      <div class="bento">
+        <div class="card wide"><p class="fig">01 — Space efficiency</p><h3 class="serif" style="font-size:26px;margin-top:8px">Your floor comes back.</h3><p style="color:var(--ink-2);margin-top:6px;max-width:62ch">Folded against the wall, the desk disappears. Open, it gives you a steady surface where you need it. One piece of furniture does both jobs.</p><svg viewBox="0 0 220 60" style="width:100%;margin-top:14px" aria-hidden="true"><line x1="10" y1="50" x2="210" y2="50" stroke="var(--oak)" stroke-width="1.5"/><rect x="70" y="18" width="80" height="32" fill="none" stroke="var(--ink-2)"/><line x1="70" y1="18" x2="70" y2="50" stroke="var(--ink-2)"/><line x1="150" y1="18" x2="150" y2="50" stroke="var(--ink-2)"/></svg></div>
+        <div class="card narrow"><p class="fig">02 — Design</p><h3 class="serif" style="font-size:22px;margin-top:8px">Warm wood, modern and minimal.</h3><p style="color:var(--ink-2);margin-top:6px">It looks like furniture, not a workaround.</p></div>
+        <div class="card narrow"><p class="fig">03 — Dual function</p><h3 class="serif" style="font-size:22px;margin-top:8px">Shelf and desk in one.</h3><p style="color:var(--ink-2);margin-top:6px">Books and plants when closed. Laptop and notebooks when open.</p></div>
+        <div class="card narrow"><p class="fig">04 — Installation</p><h3 class="serif" style="font-size:22px;margin-top:8px">Mount it once.</h3><p style="color:var(--ink-2);margin-top:6px">Wall-mounted and steady for daily use. Moves with you between rooms and rentals.</p></div>
+        <div class="card narrow"><p class="fig">05 — Durability</p><h3 class="serif" style="font-size:22px;margin-top:8px">Wood and metal, built to last.</h3><p style="color:var(--ink-2);margin-top:6px">Wood panel with metal brackets, assembled with screws and glue, sanded smooth by hand.</p></div>
+      </div>
+    </div>
+    <div class="sec">
+      <p class="eyebrow">What we heard</p>
+      <h2 class="serif">What 383 people told us.</h2>
+      <p class="lead">We asked 383 people about convertible furniture before we built anything. Here is what they said.</p>
+      <div class="grid4">
+        <div class="card stat"><p class="n">383</p><p>people surveyed</p></div>
+        <div class="card stat"><p class="n">83%</p><p>interested in trying it (318 people)</p></div>
+        <div class="card stat"><p class="n">229</p><p>would spend under ₱1,000</p></div>
+        <div class="card stat"><p class="n">185</p><p>put quality and durability first</p></div>
+      </div>
+      <p style="color:var(--ink-2);font-size:14px;margin-top:14px;max-width:62ch">Only 64 owned convertible furniture. Price came second (162), then space-saving (36). That is why the FlexiWall Desk costs ₱499.00.</p>
+    </div>
+    <div class="sec">
+      <div class="cta-band"><div><p class="big">FlexiWall Desk — ₱499.00</p><p style="opacity:.85">A shelf that becomes a desk.</p></div><button class="btn-g" data-add="1">Add to bag</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT ============ -->
+<section class="page" data-page="product">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Product</p><h1 class="serif">FlexiWall Desk</h1><p class="lead">How it folds, what it is made of, what arrives in the box, and how to mount it.</p></div>
+    <div class="grid2">
+      <div>
+        <div class="stage" style="aspect-ratio:4/3"><span class="fig" style="position:absolute;top:14px;left:16px">FIG. 01 — Two states</span><img class="stage-img" id="prodImg" src="images/closed.png" alt="FlexiWall Desk"></div>
+        <div class="thumbs" id="prodThumbs">
+          <button class="on" data-thumb="images/closed.png" aria-label="Closed shelf"><img src="images/closed.png" alt=""></button>
+          <button data-thumb="images/open.png" aria-label="Open desk"><img src="images/open.png" alt=""></button>
+          <button data-thumb="images/hinge.jpg" aria-label="Hinge detail"><img src="images/hinge.jpg" alt=""></button>
+          <button data-thumb="images/grain.jpg" aria-label="Wood grain"><img src="images/grain.jpg" alt=""></button>
+          <button data-thumb="images/in-room.jpg" aria-label="In a small room"><img src="images/in-room.jpg" alt=""></button>
+        </div>
+        <p class="fig" style="margin-top:8px">Closed shelf · Open desk · Hinge detail · Wood grain · In a small room</p>
+        <div class="card" style="padding:20px;margin-top:20px">
+          <p style="font-weight:600">Shelf, desk, folded away.</p>
+          <p style="color:var(--ink-2);margin-top:6px">Closed, it is a shelf for books, plants and personal items. Lower it down and it becomes a steady desk for a laptop, notebooks and school materials. Fold it back and the floor is free again.</p>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">EverWood Designs</p>
+        <h2 class="serif" style="font-size:40px;font-weight:500;margin-top:8px">FlexiWall Desk</h2>
+        <p class="price">₱499.00</p>
+        <p style="color:var(--ink-2);margin-top:8px">One product, one price. Cash on delivery available. GCash, Maya and cards accepted.</p>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:16px"><span style="font-size:14px;font-weight:500">Quantity</span><div class="qty-ctl"><button data-qty="-1" aria-label="Decrease quantity">−</button><span id="qtyProd">1</span><button data-qty="1" aria-label="Increase quantity">+</button></div></div>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn-p" data-add="1" style="flex:1;min-width:150px">Add to bag</button><a class="btn-g" href="#/checkout" style="flex:1;min-width:150px">Buy now</a></div>
+        <div class="card" style="padding:20px;margin-top:20px">
+          <p style="font-weight:600">In the box</p>
+          <ul style="margin:10px 0 0 20px;color:var(--ink-2)"><li>FlexiWall Desk unit (1)</li><li>Metal L-brackets (2)</li><li>Screws (8) and wall anchors (4)</li><li>Installation guide (1)</li></ul>
+          <p style="font-size:14px;color:var(--ink-2);margin-top:10px">Shipping box: 84 × 20 × 20 cm kraft carton with bubble wrap. Badges on the box: Sustainable materials · Sturdy and durable · Perfect for small spaces.</p>
+          <img src="images/packaging.jpg" alt="Kraft shipping box" style="border-radius:14px;margin-top:14px;width:100%;aspect-ratio:16/9;object-fit:cover">
+          <p class="fig" style="margin-top:8px">FIG. 02 — Kraft box, 84 × 20 × 20 cm</p>
+        </div>
+      </div>
+    </div>
+    <div class="sec">
+      <p class="eyebrow">Installation</p>
+      <h2 class="serif">Mount it in an afternoon.</h2>
+      <p class="lead">You will need a drill, a level, a pencil, and the right anchors for your wall. Take your time with the marking.</p>
+      <div class="grid2" style="margin-top:20px">
+        <div>
+          <ol class="steps">
+            <li><span class="no">01</span><div><h3>Pick your spot</h3><p>Sit in your chair first. Mark the height where your knees clear the open desk. Choose a wall with solid fixing points, not a thin partition on its own.</p></div></li>
+            <li><span class="no">02</span><div><h3>Mark and level</h3><p>Hold the brackets up, mark the holes with a pencil, and check with a level. A straight line now means a steady desk later.</p></div></li>
+            <li><span class="no">03</span><div><h3>Drill and fit anchors</h3><p>Drill the holes and fit anchors that match your wall. Use the table on the right. If you are unsure, ask the hardware store to see your wall type.</p></div></li>
+            <li><span class="no">04</span><div><h3>Fix the brackets</h3><p>Screw the brackets firmly into the anchors. Hang the unit and give it a firm pull. It should not move.</p></div></li>
+            <li><span class="no">05</span><div><h3>Fold and test</h3><p>Fold the desk down and place a laptop and notebooks on it. Sit and work for a few minutes. Adjust the height if needed.</p></div></li>
+          </ol>
+          <div class="card" style="padding:18px;margin-top:18px"><p style="font-weight:600">Tools</p><p style="color:var(--ink-2);font-size:15px;margin-top:4px">Drill with masonry bit · Level · Pencil · Tape measure · Screwdriver · Hammer for anchors</p></div>
+        </div>
+        <div>
+          <table class="spec-table">
+            <thead><tr><th>Wall type</th><th>Fixing</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td>Concrete hollow block</td><td>Block anchors</td><td>Anchor in the solid part of the block</td></tr>
+              <tr><td>Solid concrete</td><td>Concrete anchors</td><td>Drill with a masonry bit</td></tr>
+              <tr><td>Wood / plywood partition</td><td>Screws into framing</td><td>Find the studs first</td></tr>
+              <tr><td>Gypsum board</td><td>Backing required</td><td>Never mount on thin board alone</td></tr>
+            </tbody>
+          </table>
+          <div class="card" style="padding:18px;margin-top:18px"><p style="font-weight:600">Safety notes</p><p style="color:var(--ink-2);font-size:15px;margin-top:4px">Never mount on a thin partition without backing. Keep the load to 15 kg evenly distributed. If the wall feels hollow or crumbly, stop and get advice before drilling.</p></div>
+          <img src="images/hinge.jpg" alt="Hinge detail" style="border-radius:14px;margin-top:18px;width:100%;aspect-ratio:16/9;object-fit:cover">
+          <p class="fig" style="margin-top:8px">FIG. 03 — Hinge detail</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECS ============ -->
+<section class="page" data-page="specs">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Specs</p><h1 class="serif">Specifications</h1><p class="lead">Full specifications for the FlexiWall Desk, including dimensions, materials, and what is in the box.</p></div>
+    <div class="grid2">
+      <div>
+        <svg viewBox="0 0 340 240" style="width:100%;background:var(--surface);border:1px solid var(--line);border-radius:16px" role="img" aria-label="Line drawing of the FlexiWall Desk closed with dimensions">
+          <rect x="40" y="40" width="260" height="100" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+          <rect x="40" y="122" width="260" height="10" fill="var(--surface-2)" stroke="var(--ink)"/>
+          <line x1="40" y1="170" x2="300" y2="170" stroke="var(--oak)" stroke-dasharray="5 4"/>
+          <line x1="40" y1="164" x2="40" y2="176" stroke="var(--oak)"/><line x1="300" y1="164" x2="300" y2="176" stroke="var(--oak)"/>
+          <text x="170" y="190" text-anchor="middle" font-size="12" font-family="IBM Plex Mono" fill="var(--oak-ink)">70 cm</text>
+          <line x1="318" y1="40" x2="318" y2="140" stroke="var(--oak)" stroke-dasharray="5 4"/>
+          <text x="326" y="95" font-size="12" font-family="IBM Plex Mono" fill="var(--oak-ink)">22 cm</text>
+          <line x1="40" y1="210" x2="300" y2="210" stroke="var(--oak)" stroke-dasharray="5 4"/>
+          <text x="170" y="228" text-anchor="middle" font-size="12" font-family="IBM Plex Mono" fill="var(--oak-ink)">20 cm deep</text>
+        </svg>
+        <p class="fig" style="margin-top:8px">FIG. 01 — Closed, front elevation</p>
+        <img src="images/grain.jpg" alt="Wood grain" style="border-radius:14px;margin-top:18px;width:100%;aspect-ratio:16/9;object-fit:cover">
+        <p class="fig" style="margin-top:8px">FIG. 02 — Palochina grain, natural varnish finish</p>
+      </div>
+      <div>
+        <table class="spec-table">
+          <tbody>
+            <tr><th>Product</th><td>FlexiWall Desk — wall-mounted shelf that folds into a desk</td></tr>
+            <tr><th>Price</th><td>₱499.00</td></tr>
+            <tr><th>Closed size</th><td>70 cm wide × 22 cm tall × 20 cm deep</td></tr>
+            <tr><th>Open size</th><td>52 cm projection from wall · 50 cm desk depth</td></tr>
+            <tr><th>Height</th><td>74 cm from floor · 64 cm knee clearance</td></tr>
+            <tr><th>Weight</th><td>4.5 kg unit · 5.2 kg packed</td></tr>
+            <tr><th>Load</th><td>Up to 15 kg evenly distributed</td></tr>
+            <tr><th>Materials</th><td>Palochina wood panel · Metal brackets and supports · Screws · Wood glue</td></tr>
+            <tr><th>Finish</th><td>Natural varnish, light oak tone</td></tr>
+            <tr><th>In the box</th><td>Unit · 2 brackets · 8 screws · 4 anchors · Installation guide</td></tr>
+            <tr><th>Shipping box</th><td>84 × 20 × 20 cm kraft carton with bubble wrap</td></tr>
+            <tr><th>Warranty</th><td>6 months against manufacturing defects</td></tr>
+            <tr><th>Made in</th><td>Candaba, Pampanga, Philippines</td></tr>
+          </tbody>
+        </table>
+        <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap"><button class="btn-p" data-add="1">Add to bag</button><a class="btn-g" href="#/checkout">Buy now</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW MADE ============ -->
+<section class="page" data-page="how-made">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">How it is made</p><h1 class="serif">Eight steps from board to box.</h1><p class="lead">Done slowly, in a small workshop in Candaba. The slow steps are the ones you cannot see.</p></div>
+    <div class="grid2">
+      <div>
+        <img src="images/workshop.jpg" alt="Workshop workbench" style="border-radius:16px;width:100%;aspect-ratio:4/3;object-fit:cover">
+        <p class="fig" style="margin-top:8px">FIG. 01 — The workshop bench</p>
+        <div class="card" style="padding:20px;margin-top:18px"><p style="font-weight:600">Made in small batches</p><p style="color:var(--ink-2);margin-top:6px">We make 12 to 15 units a month. Every unit is checked by hand before it goes into the box. Offcuts go back into the workshop for jigs and small parts.</p></div>
+      </div>
+      <div>
+        <ol class="steps">
+          <li><span class="no">01</span><div><h3>Select the wood panel</h3><p>Choose a palochina panel with even grain and no cracks.</p></div></li>
+          <li><span class="no">02</span><div><h3>Measure and mark</h3><p>Mark every cut line twice. Measure twice, cut once.</p></div></li>
+          <li><span class="no">03</span><div><h3>Cut the parts</h3><p>Cut the shelf board, side supports and brackets to size.</p></div></li>
+          <li><span class="no">04</span><div><h3>Sand and smooth</h3><p>Sand every surface until it feels smooth to the hand. This takes longer than cutting.</p></div></li>
+          <li><span class="no">05</span><div><h3>Assemble</h3><p>Join the parts with screws and wood glue. Check alignment as you go.</p></div></li>
+          <li><span class="no">06</span><div><h3>Inspect</h3><p>Check the structure and alignment. Fold it open and closed. Fix anything that wobbles.</p></div></li>
+          <li><span class="no">07</span><div><h3>Apply the finish</h3><p>Apply the natural varnish in the light oak tone, evenly.</p></div></li>
+          <li><span class="no">08</span><div><h3>Dry, test and pack</h3><p>Let it dry and cure. Fit the hinges, run a quality test, then pack it in the kraft box with bubble wrap.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="page" data-page="reviews">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Reviews</p><h1 class="serif">No reviews yet.</h1><p class="lead">Be the first to review. Only verified buyers can review, so every review comes from someone who received the desk.</p></div>
+    <div class="grid2">
+      <div class="card" style="padding:26px">
+        <p style="font-weight:600;font-size:18px">How reviews work</p>
+        <ul style="margin:12px 0 0 20px;color:var(--ink-2)"><li>We email a review link after delivery.</li><li>You rate the desk from 1 to 5 and write what you like.</li><li>Photos are optional. No faces needed.</li><li>We publish every verified review, good or bad.</li></ul>
+        <p style="color:var(--ink-2);font-size:14px;margin-top:14px">Every review is from a verified buyer.</p>
+      </div>
+      <form class="card" style="padding:26px" id="reviewForm">
+        <p style="font-weight:600;font-size:18px">Leave a review</p>
+        <div class="form-grid" style="grid-template-columns:1fr">
+          <label class="f">Order number<input class="input" id="rvOrder" placeholder="EW-261110-7K3Q" required></label>
+          <label class="f">Rating (1 to 5)<input class="input" id="rvRating" type="number" min="1" max="5" value="5" required></label>
+          <label class="f">Your review<textarea class="input" id="rvText" placeholder="How does it feel in your room?"></textarea></label>
+          <button class="btn-p" type="submit">Submit review</button>
+          <p class="err" id="rvErr">Please enter your order number and a rating.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="page" data-page="faq">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">FAQ</p><h1 class="serif">Frequently asked questions.</h1></div>
+    <div class="prose" style="max-width:62ch">
+      <div class="acc" id="faqAcc">
+        <div class="acc-item"><button class="acc-h">How do I pay? <span class="chev">▾</span></button><div class="acc-b">GCash, Maya, credit or debit card, or cash on delivery. Card and e-wallet payments go through PayMongo secure checkout. We never see or store card numbers. Cash on delivery is paid when your order arrives.</div></div>
+        <div class="acc-item"><button class="acc-h">How long does delivery take? <span class="chev">▾</span></button><div class="acc-b">Units are made in small batches. Allow 3 to 5 working days after payment, then transit by zone: Zone A 1 to 2 days, Zone B 2 to 4 days, Zone C 3 to 6 days, Zone D 5 to 9 days. You will see a weekday-aware range at checkout.</div></div>
+        <div class="acc-item"><button class="acc-h">Can I install it myself? <span class="chev">▾</span></button><div class="acc-b">Yes, with basic tools. Follow the friendly guide on the Product page and use anchors that match your wall. If your wall is a thin partition, get backing first.</div></div>
+        <div class="acc-item"><button class="acc-h">Can I pick it up? <span class="chev">▾</span></button><div class="acc-b">Yes, free pickup at Pansol, Pasig, Candaba, Pampanga. Bring your order number. Pickup is ready 3 to 5 working days after payment.</div></div>
+        <div class="acc-item"><button class="acc-h">What if it arrives damaged? <span class="chev">▾</span></button><div class="acc-b">Message us at everwooddesign@gmail.com with a photo and your order number within 7 days. We will repair, replace, or refund, and cover return shipping for defects.</div></div>
+        <div class="acc-item"><button class="acc-h">What walls can it mount on? <span class="chev">▾</span></button><div class="acc-b">Concrete hollow block, solid concrete, and wood or plywood partitions with proper fixing. Gypsum board needs backing. See the wall table on the Product page.</div></div>
+        <div class="acc-item"><button class="acc-h">What is the warranty? <span class="chev">▾</span></button><div class="acc-b">6 months against manufacturing defects. Normal wear, water damage, and incorrect installation are not covered. Contact us with your order number to start a claim.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="page" data-page="about">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">About</p><h1 class="serif">Our story</h1></div>
+    <div class="grid2">
+      <div class="prose">
+        <p>EverWood Designs began as a feasibility study. Four marketing students at Pampanga State University, Candaba Campus, kept seeing the same problem: classmates and boarders trying to study in rooms too small for a desk.</p>
+        <p>So they researched it. They surveyed 383 people. Everyone had heard of convertible furniture, most were interested, almost none owned one. Quality and durability mattered most, then price. That became the brief: a desk that folds away, made of wood, at ₱499.</p>
+        <p>Today the FlexiWall Desk is made in small batches, 12 to 15 units a month, in a workshop in Pansol, Pasig, Candaba, Pampanga. “Ever” stands for longevity and reliability. “Wood” stands for warmth and craftsmanship. “Designs” stands for thoughtful, modern, functional.</p>
+        <p>Our vision is to be a leading innovator in space-saving furniture in the Philippines. Our mission is simple: durable, innovative furniture that supports sustainable living while maximizing comfort and efficiency.</p>
+        <h2>The makers</h2>
+        <p>Four students, one workshop. Reach us directly:</p>
+        <div style="margin-top:10px">
+          <div class="member-row"><span class="nm">Manalastas, Roselle M.</span><a href="mailto:rosellemanalastas810@gmail.com">rosellemanalastas810@gmail.com</a></div>
+          <div class="member-row"><span class="nm">Quinto, Ricajine R.</span><a href="mailto:ricajinequinto731@gmail.com">ricajinequinto731@gmail.com</a></div>
+          <div class="member-row"><span class="nm">Vinuya, Jinky S.</span><a href="mailto:jinkyvinuya18@gmail.com">jinkyvinuya18@gmail.com</a></div>
+          <div class="member-row"><span class="nm">Yumol, Irish D.</span><a href="mailto:yumulirish166@gmail.com">yumulirish166@gmail.com</a></div>
+        </div>
+        <p style="color:var(--ink-2);font-size:14px;margin-top:12px">General inquiries: everwooddesign@gmail.com · Mon to Fri, 8:00 AM to 5:00 PM (Asia/Manila).</p>
+      </div>
+      <div>
+        <img src="images/workshop.jpg" alt="Workshop bench" style="border-radius:16px;width:100%;aspect-ratio:4/3;object-fit:cover">
+        <p class="fig" style="margin-top:8px">FIG. 01 — The workshop in Candaba</p>
+        <img src="images/in-room.jpg" alt="Desk in a small room" style="border-radius:16px;margin-top:18px;width:100%;aspect-ratio:4/3;object-fit:cover">
+        <p class="fig" style="margin-top:8px">FIG. 02 — In a small room</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACK ============ -->
+<section class="page" data-page="track">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Track order</p><h1 class="serif">Where is my desk?</h1><p class="lead">No account needed. Enter your order number.</p></div>
+    <div class="grid2">
+      <form class="card" style="padding:24px" id="trackForm">
+        <label class="f">Order number<input class="input mono" id="tkNumber" placeholder="EW-261110-7K3Q" required></label>
+        <p class="err" id="tkErr">Order not found. Check the number and try again.</p>
+        <button class="btn-p" type="submit" style="width:100%;margin-top:16px">Look up order</button>
+        <p style="color:var(--ink-2);font-size:13px;margin-top:12px">Your order number is in your confirmation email, for example EW-261110-7K3Q.</p>
+      </form>
+      <div id="trackResult" class="card" style="padding:24px;display:none">
+        <p class="fig" id="trNumber"></p>
+        <h2 class="serif" style="font-size:28px;margin-top:6px">Tracking</h2>
+        <div class="chips" id="trChips"></div>
+        <ol class="timeline" id="trTimeline"></ol>
+        <p id="trEta" style="color:var(--ink-2);font-size:14px;margin-top:14px"></p>
+        <p id="trCourier" style="font-size:14px;margin-top:8px"></p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
+          <button class="btn-g" id="trCopy">Copy tracking number</button>
+          <button class="btn-g" id="trCal">Add ETA to calendar</button>
+          <a class="btn-g" href="mailto:everwooddesign@gmail.com">Message the workshop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHECKOUT ============ -->
+<section class="page" data-page="checkout">
+  <div class="wrap">
+    <div class="page-head"><p class="eyebrow">Checkout</p><h1 class="serif">Checkout</h1><p class="lead">Guest checkout. No account needed.</p></div>
+    <div class="co-grid">
+      <div>
+        <div class="card co-step">
+          <h2>1 · Contact <span class="fig" id="s1state">Open</span></h2>
+          <div id="s1body">
+            <div class="form-grid">
+              <label class="f">Email<input class="input" id="coEmail" type="email" placeholder="you@example.ph"></label>
+              <label class="f">PH mobile (09… or +639…)<input class="input" id="coPhone" placeholder="09123456789"></label>
+            </div>
+            <p class="err" id="eContact">Enter a valid email and a PH mobile number (09XXXXXXXXX or +639XXXXXXXXX).</p>
+            <button class="btn-p" id="toStep2" style="margin-top:16px">Continue to delivery</button>
+          </div>
+        </div>
+        <div class="card co-step">
+          <h2>2 · Delivery <span class="fig" id="s2state">Locked</span></h2>
+          <div id="s2body" style="display:none">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+              <label class="radio-card" data-method="delivery"><input type="radio" name="dmethod" value="delivery" checked><span><strong>Home delivery</strong><br><span style="color:var(--ink-2);font-size:14px">Own vehicle locally, courier beyond.</span></span></label>
+              <label class="radio-card" data-method="pickup"><input type="radio" name="dmethod" value="pickup"><span><strong>Store pickup</strong><br><span style="color:var(--ink-2);font-size:14px">Pansol, Pasig, Candaba. Free.</span></span></label>
+            </div>
+            <div id="addrBlock">
+              <div class="form-grid">
+                <label class="f">Region<select class="input" id="coRegion"><option>Central Luzon</option><option>Metro Manila</option></select></label>
+                <label class="f">Province<select class="input" id="coProvince"><option>Pampanga</option><option>Bulacan</option></select></label>
+                <label class="f">City / Municipality<select class="input" id="coCity"><option>Candaba</option><option>San Miguel</option></select></label>
+                <label class="f">Barangay<select class="input" id="coBarangay"><option>Pansol</option><option>Pasig</option><option>Pulung Gumatang</option></select></label>
+                <label class="f full">Street / house no.<input class="input" id="coStreet" placeholder="Lot 1, Block 2"></label>
+                <label class="f">Landmark (optional)<input class="input" id="coLandmark"></label>
+                <label class="f">Delivery notes (optional)<input class="input" id="coNotes"></label>
+              </div>
+            </div>
+            <p class="err" id="eAddr">Please complete your delivery address.</p>
+            <button class="btn-p" id="toStep3" style="margin-top:16px">Continue to payment</button>
+          </div>
+        </div>
+        <div class="card co-step">
+          <h2>3 · Payment <span class="fig" id="s3state">Locked</span></h2>
+          <div id="s3body" style="display:none">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+              <label class="radio-card pay-opt" data-pay="card"><input type="radio" name="pay" value="card" checked><span><strong>Card</strong><br><span style="color:var(--ink-2);font-size:14px">Visa · Mastercard</span></span></label>
+              <label class="radio-card pay-opt" data-pay="gcash"><input type="radio" name="pay" value="gcash"><span><strong>GCash</strong><br><span style="color:var(--ink-2);font-size:14px">E-wallet</span></span></label>
+              <label class="radio-card pay-opt" data-pay="maya"><input type="radio" name="pay" value="maya"><span><strong>Maya</strong><br><span style="color:var(--ink-2);font-size:14px">E-wallet</span></span></label>
+              <label class="radio-card pay-opt" data-pay="cod"><input type="radio" name="pay" value="cod"><span><strong>Cash on delivery</strong><br><span style="color:var(--ink-2);font-size:14px">Pay when your order arrives</span></span></label>
+            </div>
+            <label style="display:flex;gap:10px;margin-top:16px;font-size:14px;align-items:flex-start"><input type="checkbox" id="coTerms" style="width:20px;height:20px;margin-top:2px"><span>I accept the <a href="#/terms">Terms of Sale</a> and <a href="#/privacy">Privacy Notice</a>.</span></label>
+            <label style="display:flex;gap:10px;margin-top:10px;font-size:14px;align-items:flex-start"><input type="checkbox" id="coMarketing" style="width:20px;height:20px;margin-top:2px"><span>Email me workshop notes (optional).</span></label>
+            <p class="err" id="eTerms">Please accept the Terms and Privacy Notice.</p>
+            <button class="btn-p" id="placeOrder" style="width:100%;margin-top:16px">Review and place order</button>
+            <p style="color:var(--ink-2);font-size:13px;margin-top:10px;text-align:center">Secure checkout via PayMongo. We never see card numbers. Cash on delivery is confirmed by message.</p>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <div class="card" style="padding:22px;position:sticky;top:84px">
+          <p class="serif" style="font-size:22px">Order summary</p>
+          <div style="margin-top:14px">
+            <div class="total-row"><span>FlexiWall Desk × <span id="sumQty">1</span></span><span id="sumSub">₱499.00</span></div>
+            <div class="total-row"><span>Shipping (<span id="sumZone">Zone A</span>)</span><span id="sumShip">₱99.00</span></div>
+            <div class="total-row grand"><span>Total</span><span id="sumTotal">₱598.00</span></div>
+          </div>
+          <p id="sumEta" style="color:var(--ink-2);font-size:14px;margin-top:12px"></p>
+          <p style="font-size:14px;margin-top:8px">Cash on delivery is available. You can track your order after you place it.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDER SUCCESS ============ -->
+<section class="page" data-page="order-success">
+  <div class="wrap" style="text-align:center;padding:70px 20px">
+    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--oak)" stroke-width="1.5" style="margin:0 auto"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+    <h1 class="serif" style="font-size:44px;margin-top:16px">Order placed.</h1>
+    <p style="max-width:62ch;margin:12px auto;color:var(--ink-2)">Thank you. Your FlexiWall Desk is now being made. We will email you at each step until it arrives.</p>
+    <p class="mono" id="successNo" style="margin-top:8px"></p>
+    <p style="color:var(--ink-2);font-size:14px;margin-top:6px">Allow 3 to 5 working days after payment, plus transit time. Your estimated arrival is in your email.</p>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap"><a class="btn-p" href="#/track">Track this order</a><a class="btn-g" href="#/home">Back to product</a></div>
+    <p style="color:var(--ink-2);font-size:14px;margin-top:28px">— EverWood Designs, Candaba, Pampanga</p>
+  </div>
+</section>
+
+<!-- ============ LEGAL ============ -->
+<section class="page" data-page="privacy">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Legal</p><h1 class="serif">Privacy Notice</h1><p class="lead">Aligned with the Data Privacy Act of 2012 (RA 10173).</p></div>
+  <div class="prose"><p>EverWood Designs collects only what the shop needs: contact details, delivery address, order and payment status, and, only with your consent, analytics preferences. We never store card numbers. Payments are processed by PayMongo.</p><p>We share data only with the payment processor, the courier, and our email provider, and only to fulfil your order. We keep order data for the period required by law and for warranty support, then delete or anonymise it.</p><p>You may request access, correction, or erasure at everwooddesign@gmail.com. We respond within the period required by law. Consent is logged with policy version and timestamp, remembered for 12 months, and can be changed anytime from Privacy settings in the footer.</p><p>Contact: Pansol, Pasig, Candaba, Pampanga, Philippines · Mon to Fri, 8:00 AM to 5:00 PM (Asia/Manila).</p></div></div>
+</section>
+<section class="page" data-page="terms">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Legal</p><h1 class="serif">Terms of Sale</h1><p class="lead">These terms apply to every order.</p></div>
+  <div class="prose"><p>One product: FlexiWall Desk, ₱499.00. Prices are shown in Philippine pesos. Shipping is calculated at checkout by zone.</p><p>Orders are confirmed after payment, or by message for cash on delivery. Units are made in small batches. The estimated arrival range shown at checkout is an estimate, not a guarantee.</p><p>Seller: EverWood Designs, Pansol, Pasig, Candaba, Pampanga, Philippines, everwooddesign@gmail.com, Mon to Fri, 8:00 AM to 5:00 PM (Asia/Manila).</p></div></div>
+</section>
+<section class="page" data-page="shipping">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Help</p><h1 class="serif">Shipping and delivery</h1></div>
+  <div class="prose"><p>Units are made in small batches. Allow 3 to 5 working days after payment, then transit by zone.</p>
+  <table class="spec-table"><tbody>
+  <tr><th>Zone A — Own delivery</th><td>Candaba and nearby Pampanga towns · 1 to 2 days · ₱99</td></tr>
+  <tr><th>Zone B — Courier</th><td>Central Luzon and Metro Manila · 2 to 4 days · ₱149</td></tr>
+  <tr><th>Zone C — Courier</th><td>Rest of Luzon · 3 to 6 days · ₱199</td></tr>
+  <tr><th>Zone D — Courier</th><td>Visayas and Mindanao · 5 to 9 days · ₱249</td></tr>
+  <tr><th>Store pickup</th><td>Pansol, Pasig, Candaba · Free · Ready in 3 to 5 working days</td></tr>
+  </tbody></table>
+  <p>Local orders may be delivered with our own three-wheel cargo vehicle. Beyond that, we ship by courier. You will receive a tracking number by email.</p></div></div>
+</section>
+<section class="page" data-page="returns">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Help</p><h1 class="serif">Returns and refunds</h1></div>
+  <div class="prose"><p>We want every desk to arrive in good condition. If yours arrives damaged or defective, message us at everwooddesign@gmail.com with a photo and your order number within 7 days. We will repair, replace, or refund, and cover return shipping for defects.</p><p>Unused items in original packaging may be returned within 14 days. Return shipping for change-of-mind is paid by the buyer. Refunds are issued to the original payment method after the returned unit is received and checked. Cash on delivery refunds are issued by bank transfer.</p><p>Warranty: 6 months against manufacturing defects. Normal wear, water damage, and incorrect installation are not covered.</p></div></div>
+</section>
+<section class="page" data-page="cookies">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Legal</p><h1 class="serif">Cookie Policy</h1></div>
+  <div class="prose"><p>Essential cookies keep your bag and checkout working. Preferences remember your theme. Analytics are off until you accept them in the consent banner. There are no marketing cookies at launch.</p><p>Consent lasts 12 months and is re-asked when this policy changes. Change your choices anytime from Privacy settings in the footer.</p></div></div>
+</section>
+<section class="page" data-page="seller">
+  <div class="wrap"><div class="page-head"><p class="eyebrow">Legal</p><h1 class="serif">Seller information</h1></div>
+  <div class="prose">
+    <table class="spec-table"><tbody>
+    <tr><th>Business</th><td>EverWood Designs</td></tr>
+    <tr><th>Address</th><td>Pansol, Pasig, Candaba, Pampanga, Philippines</td></tr>
+    <tr><th>Email</th><td>everwooddesign@gmail.com</td></tr>
+    <tr><th>Hours</th><td>Mon to Fri, 8:00 AM to 5:00 PM (Asia/Manila)</td></tr>
+    </tbody></table>
+    <h2>Partners</h2>
+    <div class="member-row"><span class="nm">Manalastas, Roselle M.</span><a href="mailto:rosellemanalastas810@gmail.com">rosellemanalastas810@gmail.com</a></div>
+    <div class="member-row"><span class="nm">Quinto, Ricajine R.</span><a href="mailto:ricajinequinto731@gmail.com">ricajinequinto731@gmail.com</a></div>
+    <div class="member-row"><span class="nm">Vinuya, Jinky S.</span><a href="mailto:jinkyvinuya18@gmail.com">jinkyvinuya18@gmail.com</a></div>
+    <div class="member-row"><span class="nm">Yumol, Irish D.</span><a href="mailto:yumulirish166@gmail.com">yumulirish166@gmail.com</a></div>
+    <p style="color:var(--ink-2);font-size:14px;margin-top:14px">Shown as required for online sellers under the Internet Transactions Act (RA 11967).</p>
+  </div></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="wordmark" href="#/home"><span class="wm-top"><span class="ever">Ever</span><span class="wood">Wood</span></span><span class="wm-sub"><i></i><span>DESIGNS</span></span></a>
+        <p style="margin-top:14px;max-width:36ch;color:var(--ink-2)">A wall-mounted wooden shelf that folds down into a desk. Made in small batches in Candaba, Pampanga.</p>
+        <form id="nlForm" style="margin-top:18px">
+          <label for="nlEmail" style="font-size:14px;font-weight:500">Workshop notes, by email</label>
+          <div style="display:flex;gap:8px;margin-top:8px"><input id="nlEmail" class="input" type="email" placeholder="you@example.ph" required style="flex:1"><button class="btn-p" type="submit" style="min-height:50px">Join</button></div>
+          <p style="font-size:12px;color:var(--ink-2);margin-top:6px">Double opt-in. Unsubscribe anytime. We write rarely.</p>
+          <p id="nlDone" style="font-size:14px;margin-top:8px;display:none;font-weight:600">Thank you. Please check your inbox to confirm.</p>
+        </form>
+        <p style="margin-top:16px;font-size:14px;color:var(--ink-2)">everwooddesign@gmail.com<br>Pansol, Pasig, Candaba, Pampanga<br>Mon to Fri, 8:00 AM to 5:00 PM</p>
+      </div>
+      <nav aria-label="Shop"><h3>Shop</h3><ul><li><a href="#/product">Product</a></li><li><a href="#/specs">Specs</a></li><li><a href="#/track">Track order</a></li></ul></nav>
+      <nav aria-label="Help"><h3>Help</h3><ul><li><a href="#/shipping">Shipping and delivery</a></li><li><a href="#/returns">Returns and refunds</a></li><li><a href="#/faq">FAQ</a></li><li><a href="#/product">Installation guide</a></li><li><a href="mailto:everwooddesign@gmail.com">Contact</a></li></ul></nav>
+      <nav aria-label="Company"><h3>Company</h3><ul><li><a href="#/about">Our story</a></li><li></li><li><a href="#/how-made">How it is made</a></li></ul></nav>
+      <nav aria-label="Legal"><h3>Legal</h3><ul><li><a href="#/privacy">Privacy Notice</a></li><li><a href="#/terms">Terms of Sale</a></li><li><a href="#/cookies">Cookie Policy</a></li><li><a href="#/seller">Seller information</a></li><li><button id="privacySettings" style="font-size:15px;text-decoration:underline">Privacy settings</button></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <span>GCash · Maya · Visa · Mastercard · Cash on delivery</span>
+      <span>Made in Candaba, Pampanga by EverWood Designs.</span>
+      <span>© <span id="year">2026</span> EverWood Designs</span>
+      <button id="toTop" style="text-decoration:underline">Back to top</button>
+    </div>
+  </div>
+  <div class="giant" aria-hidden="true">EverWood</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Shopping bag">
+  <div style="display:flex;justify-content:space-between;align-items:center"><h2>Your bag</h2><button class="icon-btn" id="closeDrawer" aria-label="Close bag">✕</button></div>
+  <div style="display:flex;gap:14px;margin-top:20px">
+    <div class="stage" style="width:96px;height:96px;flex-shrink:0;display:grid;place-items:center"><img src="images/closed.png" alt="FlexiWall Desk closed" style="width:100%;height:100%;object-fit:contain;padding:8px"></div>
+    <div style="flex:1">
+      <p class="serif" style="font-size:19px">FlexiWall Desk</p>
+      <p style="color:var(--ink-2);font-size:14px">Wall-mounted shelf that folds into a desk</p>
+      <p style="font-weight:600;margin-top:4px">₱499.00</p>
+      <div class="qty-ctl" style="margin-top:10px"><button data-qty="-1" aria-label="Decrease quantity">−</button><span id="qtyDrawer">1</span><button data-qty="1" aria-label="Increase quantity">+</button></div>
+    </div>
+  </div>
+  <div style="margin-top:20px">
+    <div class="total-row"><span>Subtotal</span><span id="dSub">₱499.00</span></div>
+    <div class="total-row"><span>Estimated shipping</span><span id="dShip">Choose at checkout</span></div>
+    <div class="total-row grand"><span>Total</span><span id="dTotal">₱499.00</span></div>
+  </div>
+  <label class="f" style="margin-top:14px">Voucher code (optional)<input class="input" id="voucher" placeholder="e.g. WELCOME" style="margin-top:6px"></label>
+  <a class="btn-p" href="#/checkout" id="toCheckout" style="width:100%;margin-top:16px">Checkout</a>
+  <p style="color:var(--ink-2);font-size:14px;margin-top:12px;text-align:center">GCash, Maya, cards and cash on delivery. Track every step. Made in small batches in Pampanga.</p>
+</aside>
+
+<div class="consent" id="consent" role="dialog" aria-label="Privacy choices">
+  <h3>Your privacy.</h3>
+  <p>We use only essential cookies to run the shop. Analytics stay off until you accept them. There are no marketing cookies.</p>
+  <div class="row"><button class="acc" id="acceptAll">Accept all</button><button class="ess" id="essentialOnly">Essential only</button></div>
+</div>
+
+<div class="buybar"><div class="buybar-in"><span style="font-weight:600">₱499.00</span><button class="btn-p" data-add="1" style="flex:1">Add to bag</button></div></div>
+<div class="toast" id="toast">Added to bag</div>
+
+<script>
+(function(){
+  "use strict";
+  var PRICE = 49900;
+  var FEES = { A: 9900, B: 14900, C: 19900, D: 24900, Pickup: 0 };
+  var ZONES = { A: "Zone A", B: "Zone B", C: "Zone C", D: "Zone D", Pickup: "Pickup" };
+  var state = { qty: 1, zone: "A", method: "delivery", pay: "card" };
+  try { var saved = JSON.parse(localStorage.getItem("everwood-cart") || "null"); if (saved && saved.qty) state.qty = saved.qty; } catch(e){}
+  function fmt(c){ return "₱" + (c/100).toFixed(2); }
+  function $(s){ return document.querySelector(s); }
+  function $$(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  function saveCart(){ try{ localStorage.setItem("everwood-cart", JSON.stringify({qty: state.qty})); }catch(e){} }
+  function syncQty(){
+    ["qtyHome","qtyProd","qtyDrawer","sumQty"].forEach(function(id){ var el = document.getElementById(id); if(el) el.textContent = state.qty; });
+    var bc = document.getElementById("bagCount"); if(bc) bc.textContent = state.qty;
+    var sub = PRICE * state.qty;
+    var ship = FEES[state.method === "pickup" ? "Pickup" : state.zone];
+    var dSub = document.getElementById("dSub"); if(dSub) dSub.textContent = fmt(sub);
+    var dShip = document.getElementById("dShip"); if(dShip) dShip.textContent = fmt(ship);
+    var dTotal = document.getElementById("dTotal"); if(dTotal) dTotal.textContent = fmt(sub + ship);
+    var sSub = document.getElementById("sumSub"); if(sSub) sSub.textContent = fmt(sub);
+    var sShip = document.getElementById("sumShip"); if(sShip) sShip.textContent = fmt(ship);
+    var sTotal = document.getElementById("sumTotal"); if(sTotal) sTotal.textContent = fmt(sub + ship);
+    var sZone = document.getElementById("sumZone"); if(sZone) sZone.textContent = state.method === "pickup" ? "Pickup" : ZONES[state.zone];
+    saveCart();
+  }
+  function toast(msg){ var t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); setTimeout(function(){ t.classList.remove("show"); }, 2200); }
+  function openDrawer(){ document.getElementById("drawer").classList.add("show"); document.getElementById("overlay").classList.add("show"); }
+  function closeDrawer(){ document.getElementById("drawer").classList.remove("show"); document.getElementById("overlay").classList.remove("show"); }
+  document.getElementById("bagBtn").addEventListener("click", openDrawer);
+  document.getElementById("closeDrawer").addEventListener("click", closeDrawer);
+  document.getElementById("overlay").addEventListener("click", closeDrawer);
+  document.addEventListener("click", function(e){
+    var q = e.target.closest("[data-qty]");
+    if(q){ state.qty = Math.min(10, Math.max(1, state.qty + parseInt(q.getAttribute("data-qty"),10))); syncQty(); return; }
+    var a = e.target.closest("[data-add]");
+    if(a){ openDrawer(); toast("Added to bag"); return; }
+  });
+  document.getElementById("addHome").addEventListener("click", function(){ openDrawer(); toast("Added to bag"); });
+  document.getElementById("toCheckout").addEventListener("click", closeDrawer);
+
+  /* Router: separate pages via hash */
+  var ROUTES = ["home","product","specs","how-made","reviews","faq","about","track","checkout","order-success","privacy","terms","shipping","returns","cookies","seller"];
+  function route(){
+    var h = (location.hash || "#/home").replace("#/","").split("?")[0];
+    if (ROUTES.indexOf(h) === -1) h = "home";
+    $$(".page").forEach(function(p){ p.classList.toggle("active", p.getAttribute("data-page") === h); });
+    $$("#deskLinks a").forEach(function(a){ a.classList.toggle("on", a.getAttribute("data-nav") === h); });
+    document.getElementById("mobileMenu").classList.remove("open");
+    window.scrollTo({top:0});
+    if (h === "checkout") syncQty();
+  }
+  window.addEventListener("hashchange", route);
+  document.getElementById("menuBtn").addEventListener("click", function(){
+    var m = document.getElementById("mobileMenu"); var open = m.classList.toggle("open");
+    this.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  $$("#mobileMenu a").forEach(function(a){ a.addEventListener("click", function(){ document.getElementById("mobileMenu").classList.remove("open"); }); });
+
+  /* Theme */
+  function applyTheme(t){
+    var root = document.documentElement;
+    if (t === "system"){ var dark = window.matchMedia("(prefers-color-scheme: dark)").matches; root.setAttribute("data-theme", dark ? "dark" : "light"); }
+    else root.setAttribute("data-theme", t);
+    $$("[data-theme-btn]").forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-theme-btn") === t); });
+    try{ localStorage.setItem("everwood-theme", t); }catch(e){}
+  }
+  var savedTheme = "system"; try{ savedTheme = localStorage.getItem("everwood-theme") || "system"; }catch(e){}
+  applyTheme(savedTheme);
+  $$("[data-theme-btn]").forEach(function(b){ b.addEventListener("click", function(){ applyTheme(b.getAttribute("data-theme-btn")); }); });
+
+  /* Hero / product image switchers */
+  function wireThumbs(wrapId, imgId){
+    var wrap = document.getElementById(wrapId); if(!wrap) return;
+    wrap.addEventListener("click", function(e){
+      var btn = e.target.closest("[data-thumb]"); if(!btn) return;
+      $$("#" + wrapId + " button").forEach(function(b){ b.classList.remove("on"); });
+      btn.classList.add("on");
+      var img = document.getElementById(imgId);
+      img.style.opacity = "0"; img.style.transform = "translateY(8px)";
+      setTimeout(function(){ img.src = btn.getAttribute("data-thumb"); img.onload = function(){ img.style.opacity = "1"; img.style.transform = "none"; }; setTimeout(function(){ img.style.opacity = "1"; img.style.transform = "none"; }, 350); }, 180);
+    });
+  }
+  wireThumbs("heroThumbs","heroImg"); wireThumbs("prodThumbs","prodImg");
+  $$(".seg button").forEach(function(b){
+    b.addEventListener("click", function(){
+      $$(".seg button").forEach(function(x){ x.classList.remove("on"); x.setAttribute("aria-selected","false"); });
+      b.classList.add("on"); b.setAttribute("aria-selected","true");
+      var src = b.getAttribute("data-seg") === "open" ? "images/open.png" : "images/closed.png";
+      var img = document.getElementById("heroImg"); img.src = src;
+      $$("#heroThumbs button").forEach(function(t){ t.classList.toggle("on", t.getAttribute("data-thumb") === src); });
+    });
+  });
+
+  /* Accordions */
+  document.addEventListener("click", function(e){
+    var h = e.target.closest(".acc-h"); if(!h) return;
+    var item = h.parentElement; item.classList.toggle("open");
+  });
+
+  /* Delivery estimator */
+  function addWorkDays(from, n){ var d = new Date(from); var added = 0; while(added < n){ d.setDate(d.getDate()+1); if(d.getDay() !== 0) added++; } return d; }
+  function fmtDate(d){ return d.toLocaleDateString("en-PH", {weekday:"short", month:"short", day:"numeric"}); }
+  function updateEstimate(){
+    var method = document.getElementById("estMethod").value;
+    var zone = document.getElementById("estCity").value;
+    state.method = method; state.zone = zone;
+    var transit = { A:[1,2], B:[2,4], C:[3,6], D:[5,9] };
+    var t = method === "pickup" ? [0,0] : transit[zone];
+    var min = addWorkDays(new Date(), 3 + t[0]); var max = addWorkDays(new Date(), 5 + t[1]);
+    document.getElementById("estOut").textContent = method === "pickup" ? "Ready for pickup " + fmtDate(min) + " – " + fmtDate(max) : "Arrives " + fmtDate(min) + " – " + fmtDate(max) + " · Delivery";
+    document.getElementById("estNote").textContent = method === "pickup" ? "Usually 3 to 5 working days after payment." : "Usually 3 to 5 working days after payment, then courier transit.";
+    syncQty();
+  }
+  document.getElementById("estMethod").addEventListener("change", updateEstimate);
+  document.getElementById("estCity").addEventListener("change", updateEstimate);
+  updateEstimate();
+
+  /* Checkout steps */
+  function showStep(n){
+    [1,2,3].forEach(function(i){
+      document.getElementById("s" + i + "body").style.display = (i === n) ? "block" : "none";
+      document.getElementById("s" + i + "state").textContent = (i === n) ? "Open" : (i < n ? "Done" : "Locked");
+    });
+    syncQty();
+  }
+  document.getElementById("toStep2").addEventListener("click", function(){
+    var email = document.getElementById("coEmail").value.trim();
+    var phone = document.getElementById("coPhone").value.trim().replace(/[\s-]/g,"");
+    var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var okPhone = /^(\+639|09)\d{9}$/.test(phone);
+    document.getElementById("eContact").classList.toggle("show", !(okEmail && okPhone));
+    if (okEmail && okPhone) showStep(2);
+  });
+  $$("[data-method]").forEach(function(l){
+    l.addEventListener("click", function(){
+      $$("[data-method]").forEach(function(x){ x.classList.remove("sel"); });
+      l.classList.add("sel");
+      state.method = l.getAttribute("data-method");
+      document.getElementById("addrBlock").style.display = state.method === "delivery" ? "block" : "none";
+      syncQty();
+    });
+  });
+  $$("[data-method]")[0].classList.add("sel");
+  document.getElementById("toStep3").addEventListener("click", function(){
+    if (state.method === "delivery"){
+      var street = document.getElementById("coStreet").value.trim();
+      document.getElementById("eAddr").classList.toggle("show", !street);
+      if (!street) return;
+    }
+    showStep(3);
+  });
+  $$(".pay-opt").forEach(function(l){
+    l.addEventListener("click", function(){
+      $$(".pay-opt").forEach(function(x){ x.classList.remove("sel"); });
+      l.classList.add("sel"); state.pay = l.getAttribute("data-pay");
+    });
+  });
+  $$(".pay-opt")[0].classList.add("sel");
+  document.getElementById("placeOrder").addEventListener("click", function(){
+    if (!document.getElementById("coTerms").checked){ document.getElementById("eTerms").classList.add("show"); return; }
+    document.getElementById("eTerms").classList.remove("show");
+    var no = "EW-" + new Date().toISOString().slice(2,10).replace(/-/g,"") + "-" + Math.random().toString(36).slice(2,6).toUpperCase();
+    document.getElementById("successNo").textContent = "Order " + no + (state.pay === "cod" ? " · Cash on delivery" : "");
+    location.hash = "#/order-success";
+    toast("Order placed");
+  });
+
+  /* Tracking demo data */
+  var ORDERS = {
+    "EW-261110-7K3Q": { status:"To Pay", eta:"Nov 14 – Nov 18", courier:"", tracking:"", timeline:[["Order placed", true],["Payment confirmed", false],["Being crafted", false],["Quality checked and packed", false],["Handed to courier", false],["Delivered", false]] },
+    "EW-261109-9M2P": { status:"To Ship", eta:"Nov 13 – Nov 17", courier:"J&T Express", tracking:"JTD-8829104756", timeline:[["Order placed", true],["Payment confirmed", true],["Being crafted", true],["Quality checked and packed", true],["Handed to courier", false],["Delivered", false]] },
+    "EW-261105-4T8R": { status:"To Receive", eta:"Nov 11 – Nov 12", courier:"Ninja Van", tracking:"NV-5512093847", timeline:[["Order placed", true],["Payment confirmed", true],["Being crafted", true],["Quality checked and packed", true],["Handed to courier", true],["Out for delivery", true],["Delivered", false]] },
+    "EW-261101-2W5N": { status:"Completed", eta:"Delivered Nov 5", courier:"", tracking:"", timeline:[["Order placed", true],["Payment confirmed", true],["Being crafted", true],["Quality checked and packed", true],["Delivered", true]] }
+  };
+  document.getElementById("trackForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var num = document.getElementById("tkNumber").value.trim().toUpperCase();
+    var o = ORDERS[num];
+    if (!o){
+      if (!/^EW-[A-Z0-9-]+$/.test(num)){ document.getElementById("tkErr").classList.add("show"); return; }
+      var d1 = new Date(); d1.setDate(d1.getDate() + 5);
+      var d2 = new Date(); d2.setDate(d2.getDate() + 7);
+      var fmtD = function(d){ return d.toLocaleDateString("en-PH", {month:"short", day:"numeric"}); };
+      o = { status:"To Ship", eta: fmtD(d1) + " – " + fmtD(d2), courier:"", tracking:"", timeline:[["Order placed", true],["Payment confirmed", true],["We are packing your desk", true],["Handed to courier", false],["Delivered", false]] };
+    }
+    document.getElementById("tkErr").classList.remove("show");
+    document.getElementById("trackResult").style.display = "block";
+    document.getElementById("trNumber").textContent = "Order " + num;
+    var groups = ["To Pay","To Ship","To Receive","Completed"];
+    document.getElementById("trChips").innerHTML = groups.map(function(g){ return '<span class="chip' + (o.status === g ? " on" : "") + '">' + g + '</span>'; }).join("");
+    document.getElementById("trTimeline").innerHTML = o.timeline.map(function(t){ return '<li><span class="dot' + (t[1] ? " done" : "") + '"></span><span><strong>' + t[0] + '</strong><br><span style="color:var(--ink-2);font-size:13px">' + (t[1] ? "Done · Asia/Manila" : "Pending") + '</span></span></li>'; }).join("");
+    document.getElementById("trEta").textContent = "We are packing your desk. Estimated delivery " + o.eta + ".";
+    document.getElementById("trCourier").innerHTML = o.courier ? (o.courier + ' · <span class="mono">' + o.tracking + '</span>') : "No courier yet. We will email your tracking number when it ships.";
+    document.getElementById("trCopy").onclick = function(){ if(o.tracking){ try{ navigator.clipboard.writeText(o.tracking); }catch(e){} toast("Tracking number copied"); } };
+    document.getElementById("trCal").onclick = function(){ toast("Calendar file downloaded"); };
+  });
+
+  /* Reviews */
+  document.getElementById("reviewForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var order = document.getElementById("rvOrder").value.trim();
+    var rating = document.getElementById("rvRating").value;
+    if (!order || !rating){ document.getElementById("rvErr").classList.add("show"); return; }
+    document.getElementById("rvErr").classList.remove("show");
+    toast("Thank you. Your review will appear after verification.");
+    this.reset();
+  });
+
+  /* Newsletter */
+  document.getElementById("nlForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("nlDone").style.display = "block";
+    toast("Please confirm by email");
+  });
+
+  /* Consent */
+  var consentEl = document.getElementById("consent");
+  function showConsent(){ consentEl.classList.add("show"); }
+  function saveConsent(cats){ try{ localStorage.setItem("everwood-consent", JSON.stringify({cats:cats, at:new Date().toISOString(), v:"2026-11-10"})); }catch(e){} consentEl.classList.remove("show"); toast("Privacy saved"); }
+  try{ if (!localStorage.getItem("everwood-consent")) setTimeout(showConsent, 1200); }catch(e){ setTimeout(showConsent, 1200); }
+  document.getElementById("acceptAll").addEventListener("click", function(){ saveConsent({essential:true, preferences:true, analytics:true}); });
+  document.getElementById("essentialOnly").addEventListener("click", function(){ saveConsent({essential:true, preferences:false, analytics:false}); });
+  document.getElementById("privacySettings").addEventListener("click", showConsent);
+
+  document.getElementById("toTop").addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+  document.getElementById("year").textContent = new Date().getFullYear();
+  route(); syncQty(); showStep(1);
+})();
+</script>
+</body>
+</html>
